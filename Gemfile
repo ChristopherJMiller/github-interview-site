@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.5.1'
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -16,8 +18,6 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -32,12 +32,40 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Use Devise for OAuth Users
+gem 'devise', '~> 4.2'
+
+# Use bootstrap for CSS components
+gem 'bootstrap', '~> 4.1.2'
+# Use bootstra devise views
+gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
+
+# Use Sentry Raven for Production Error Tracking
+gem 'sentry-raven', '~> 2.7'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # Better printing of ruby objects
+  gem 'awesome_print', '~> 1.8', require: 'ap'
+
+  # Replace rails testing with rspec
+  gem 'rspec-rails', '~> 3.7'
+  # Test controllers using assigns
+  gem 'rails-controller-testing', '~> 1.0'
+  # Create database objects during testing with ease
+  gem 'factory_bot_rails', '~> 4.10'
+  # Capybara can't run in a transaction because of AJAX
+  gem 'database_cleaner', '~> 1.7'
+  # Use FFaker for random value generation
+  gem 'ffaker', '~> 2.9'
+
+
+  # Use Capybara for Integration Testing
+  gem 'capybara', '~> 2.7'
 end
 
 group :development do

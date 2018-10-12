@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - 2.5.1
+script: 
+  - bundle exec rspec
+  - bundle exec rubocop
+deploy:
+  provider: heroku
+  api_key:
+    secure: mK+YKbz/wycQ7vtpGY/brr9sciWIdKk2bb5blP7lPPKCCt87sEvunSJT8quS9E4T16QZGWeMGG8l4GCNTX8FYtEzp2Uy7zqGhFSNF6YQgibzVTLUmKqNvL8RTpDqRq8liBeB68KZw6qNQ/dd8xJIY3pT8E4lrXy3r6UUainBU2VrNmrlwomKXygIgFjn49nZHdlxR6531OkuKN8q/hVzhrkS2CCIgO4X8M+YhBrJLIgvfqZ/5SYMqHC65P6H5iNATnsRmiKyXLigkbeAg7PkZ05ArFBh+FHYiJcz/H2e/a9R+SelZMtm2d7u3vBzKyMQgDNTjr1pVH3HXgqPYOE2pkIwmCm772afo6MHegF4XCtdfnNi7BScCH/TNo+MrltKT+4b6tAJkrmnprY2Zf2G0FaEAqXXHByMzQdB9lMGdDIOQ7zcl7/FPctwao3iBD/svzfrWtw9/w2agZSvwrb5P8ySkUIPaRyC3nsP6rRLl907vmmrET7gS0RBVsfGJ65LnXZNMhc0cs8qwb/9+5Xq7N2ldAKTf+HJa4M4fMldkrHeiYWpOLG+CfTmYTqa5xjLqo+T9jqtCd83S9HAgRD9LPUncgWKnwZITKamvNaGWLjiUT5HM05vnGynBRX1hHWBzt9TlDVwiFWLdwKCLqTmVZbGMhMaRf/xZEO0uuGSn70=
+  app: christopherjmiller-github
+  on:
+    repo: ChristopherJMiller/github-interview-site

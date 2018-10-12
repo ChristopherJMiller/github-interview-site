@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Devise for OAuth Users
 gem 'devise', '~> 4.2'
+# Use OmniAuth-Github for OmniAuth Strategy
+gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 
 # Use bootstrap for CSS components
 gem 'bootstrap', '~> 4.1.2'

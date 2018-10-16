@@ -79,6 +79,8 @@ group :development do
   gem 'better_errors', '~> 2.4'
   # Advanced features of better errors
   gem 'binding_of_caller', '~> 0.8'
+  # Local development environment variables
+  gem 'figaro', '~> 1.1'
 
   # Use rubocop to check style
   gem 'rubocop', '~> 0.58', require: false

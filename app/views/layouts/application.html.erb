@@ -13,7 +13,9 @@
       <span class="navbar-brand mb-0 h1 mr-auto">Github Internship Take Home Test</span>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <%= link_to "Sign in with Gitub", user_github_omniauth_authorize_path, class: 'nav-link' %>
+          <% unless user_signed_in? %>
+            <%= link_to "Sign in with Gitub", user_github_omniauth_authorize_path, class: 'nav-link' %>
+          <% end %>
         </li>
       </ul>
     </nav>

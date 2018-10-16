@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Devise for OAuth Users
 gem 'devise', '~> 4.2'
+# Use OmniAuth-Github for OmniAuth Strategy
+gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 
 # Use bootstrap for CSS components
 gem 'bootstrap', '~> 4.1.2'
@@ -77,9 +79,11 @@ group :development do
   gem 'better_errors', '~> 2.4'
   # Advanced features of better errors
   gem 'binding_of_caller', '~> 0.8'
+  # Local development environment variables
+  gem 'figaro', '~> 1.1'
 
   # Use rubocop to check style
-  gem 'rubocop', '~> 0.58', require: false
+  gem 'rubocop', '~> 0.59', require: false
   # Check style for tests
   gem 'rubocop-rspec', require: false
   # Lock down the formatting of schema.rb

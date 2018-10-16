@@ -83,7 +83,7 @@ group :development do
   gem 'figaro', '~> 1.1'
 
   # Use rubocop to check style
-  gem 'rubocop', '~> 0.58', require: false
+  gem 'rubocop', '~> 0.59', require: false
   # Check style for tests
   gem 'rubocop-rspec', require: false
   # Lock down the formatting of schema.rb

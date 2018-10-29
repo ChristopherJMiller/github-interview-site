@@ -5,6 +5,7 @@ services:
   - postgresql
 before_script:
   - psql -c 'create database "github-interview-site_test";' -U postgres
+  - rails db:migrate
 script: 
   - bundle exec rspec
   - bundle exec rubocop

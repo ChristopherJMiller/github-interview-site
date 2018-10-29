@@ -7,6 +7,10 @@ class User < ApplicationRecord
     user = find_or_initialize_by(provider: auth.provider, uid: auth.uid)
     user.email = auth.info.email
     user.name = auth.info.name
+    user.nickname = auth.info.nickname
+    user.bio = auth.info.blog
+    user.website = auth.info.urls.blog
+    user.avatar = auth.info.image
     user.save
     user
   end

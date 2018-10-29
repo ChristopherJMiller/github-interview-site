@@ -5,6 +5,7 @@ AllCops:
     - db/schema.rb
     - db/migrate/*
     - bin/*
+    - vendor/bundle/**/*
 
 Rails:
   Enabled: true
@@ -18,7 +19,7 @@ RSpec/ExampleLength:
 RSpec/NestedGroups:
   Enabled: false
 
-FactoryBot/DynamicAttributeDefinedStatically:
+FactoryBot/AttributeDefinedStatically:
   Enabled: false
 
 Style/DateTime:

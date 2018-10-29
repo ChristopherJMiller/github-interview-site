@@ -9,6 +9,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.7'
+gem 'railties', '~> 5.0', '>= 5.0.0.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -34,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Devise for OAuth Users
 gem 'devise', '~> 4.2'
 # Use OmniAuth-Github for OmniAuth Strategy
+gem 'omniauth', '~> 1.8', '>= 1.8.1'
 gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 
 # Use bootstrap for CSS components

@@ -1,6 +1,17 @@
 <div class="container">
   <% if user_signed_in? %>
+    <img src="<%= current_user.avatar %>" alt="avatar" class="img-thumbnail">
     <h1><%= current_user.name %></h1>
-    <h3><%= current_user.email %></h3>
+    <h4> 
+      <small class="text-muted"><%= current_user.nickname %></small>
+      </br>
+      <small class="text-muted"><%= current_user.email %></small>
+    </h4>
+    <% unless current_user.bio.nil? %>
+      <blockquote class="blockquote">
+        <p class="mb-0"><%= current_user.bio %></p>
+      </blockquote>
+    <% end %>
+    <%= link_to 'View Website', current_user.website, class: 'btn btn-primary' unless current_user.website.nil? %>
   <% end %>
 </div>

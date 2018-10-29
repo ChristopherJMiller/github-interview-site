@@ -8,8 +8,8 @@ class User < ApplicationRecord
     user.email = auth.info.email
     user.name = auth.info.name
     user.nickname = auth.info.nickname
-    user.bio = auth.info.blog
-    user.website = auth.info.urls.blog
+    user.bio = auth.extra.raw_info.bio
+    user.website = auth.info.urls.Blog
     user.avatar = auth.info.image
     user.save
     user
